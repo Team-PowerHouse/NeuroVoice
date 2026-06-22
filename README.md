@@ -1,19 +1,29 @@
-# NeuroBridge
+# NeuroVoice
 
-AI-powered assistive platform for neurodivergent children.
+NeuroVoice is an AI-powered assistive platform designed to support neurodivergent children through behavioral monitoring, communication assistance, caregiver dashboards, and healthcare collaboration.
 
 ## Features
-- Child Profiles
-- Behavioral Monitoring
-- Analytics Dashboard
-- Communication Passport
-- Timeline Tracking
-- Hospital Sharing
 
-## Tech Stack
-- React
-- Vite
-- JavaScript
+* Child Profile Management
+* Behavioral Monitoring
+* Communication Passport
+* Analytics Dashboard
+* Timeline Tracking
+* Hospital Sharing Interface
 
-## Status
-Frontend Prototype for Samsung Hackathon Submission
+## Technology Stack
+
+* React
+* Vite
+* JavaScript
+* CSS
+
+## Prototype Status
+
+Frontend prototype developed for Samsung Hackathon submission.
+
+## Team PowerHouse
+
+* Haresh K
+* Team Member 2
+* Team Member 3
