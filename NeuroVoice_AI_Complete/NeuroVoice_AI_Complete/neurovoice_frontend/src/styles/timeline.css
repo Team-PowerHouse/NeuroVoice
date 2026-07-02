@@ -1,0 +1,134 @@
+.comm-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-day-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.timeline-day-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tdh-line {
+  flex: 1;
+  height: 1px;
+  background: var(--slate-200);
+}
+
+.tdh-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-500);
+  white-space: nowrap;
+}
+
+.timeline-events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 6px;
+}
+
+.timeline-event-card {
+  display: grid;
+  grid-template-columns: 56px 16px 1fr;
+  align-items: start;
+  gap: 4px;
+  background: var(--white);
+  border: 1px solid var(--slate-100);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.tec-time {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--slate-500);
+  padding-top: 2px;
+  word-break: break-all;
+}
+
+.tec-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 4px;
+  justify-self: center;
+  flex-shrink: 0;
+}
+.tec-dot.behavior {
+  background: var(--clinical-blue);
+}
+.tec-dot.prediction {
+  background: var(--signal-teal);
+}
+
+.tec-body {
+  min-width: 0;
+}
+
+.tec-kind {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--slate-500);
+}
+
+.tec-title {
+  font-size: 13px;
+  color: var(--slate-700);
+  word-break: break-word;
+}
+
+.tec-notes {
+  font-size: 12.5px;
+  color: var(--slate-500);
+  margin-top: 6px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.tec-prediction {
+  font-size: 13.5px;
+  color: var(--slate-800);
+  margin-top: 4px;
+}
+
+.tec-confidence {
+  color: var(--clinical-blue-dark);
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+.tec-source {
+  font-size: 12px;
+  color: var(--slate-500);
+  margin-top: 3px;
+}
+
+@media (max-width: 480px) {
+  .timeline-event-card {
+    grid-template-columns: 44px 14px 1fr;
+    padding: 12px 14px;
+    gap: 3px;
+  }
+
+  .tec-time {
+    font-size: 10.5px;
+  }
+
+  .timeline-events {
+    padding-left: 0;
+  }
+}
