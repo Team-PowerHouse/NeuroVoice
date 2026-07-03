@@ -95,10 +95,17 @@ def list_children(db: Session = Depends(get_db)):
 
 @router.post("", response_model=schemas.ChildOut, status_code=201)
 def create_child(payload: schemas.ChildCreate, db: Session = Depends(get_db)):
+    print("Received:", payload.model_dump())
+
     child = models.Child(**payload.model_dump(), createdAt=now_iso())
+
     db.add(child)
     db.commit()
     db.refresh(child)
+
+    print("Saved child:", child.id, child.name)
+    print("Total children:", db.query(models.Child).count())
+
     return child
 
 
