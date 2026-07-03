@@ -4,14 +4,16 @@ import StatCard from "../components/StatCard";
 import ActivityCard from "../components/ActivityCard";
 import ProgressBar from "../components/ProgressBar";
 import {
-  getChildren,
-  getBehaviors,
   getMostCommonNeed,
   getDatasetReadiness,
   getAverageConfidence,
-  getPredictionAccuracy,
-  seedDemoDataIfEmpty
+  getPredictionAccuracy
 } from "../utils/storage";
+
+import {
+  fetchChildren,
+  fetchBehaviors
+} from "../services/api";
 import { useDemoMode } from "../context/DemoModeContext.jsx";
 import "../styles/dashboard.css";
 
@@ -20,11 +22,24 @@ export default function Dashboard() {
   const [behaviors, setBehaviors] = useState([]);
   const { active: demoActive, toggle: toggleDemo, tickCount } = useDemoMode();
 
-  useEffect(() => {
-    seedDemoDataIfEmpty();
-    setChildren(getChildren());
-    setBehaviors(getBehaviors());
-  }, [tickCount]);
+ useEffect(() => {
+
+  async function loadDashboard() {
+    try {
+      const children = await fetchChildren();
+      const behaviors = await fetchBehaviors();
+
+      setChildren(children);
+      setBehaviors(behaviors);
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  loadDashboard();
+
+}, [tickCount]);
 
   const mostCommonNeed = getMostCommonNeed(behaviors);
   const readiness = getDatasetReadiness(behaviors);
