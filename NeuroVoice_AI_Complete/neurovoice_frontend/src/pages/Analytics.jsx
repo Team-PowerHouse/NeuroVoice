@@ -4,16 +4,18 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from "recharts";
 import {
-  getChildren,
-  getBehaviors,
   getNeedFrequency,
   getBehaviorTimeline,
   getConfidenceDistribution,
   getPredictionAccuracy,
-  getAccuracyTrend,
-  getPredictions,
-  seedDemoDataIfEmpty
+  getAccuracyTrend
 } from "../utils/storage";
+
+import {
+  fetchChildren,
+  fetchBehaviors,
+  fetchPredictions
+} from "../services/api";
 import "../styles/analytics.css";
 
 const NEED_COLORS = ["#2e6ff2", "#0fae9c", "#f59e0b", "#f4654a", "#7c5cf2", "#06b6d4", "#84cc16", "#ec4899", "#64748b"];
@@ -39,12 +41,29 @@ export default function Analytics() {
   const [behaviors, setBehaviors] = useState([]);
   const [predictions, setPredictions] = useState([]);
 
-  useEffect(() => {
-    seedDemoDataIfEmpty();
-    setChildren(getChildren());
-    setBehaviors(getBehaviors());
-    setPredictions(getPredictions());
-  }, []);
+ useEffect(() => {
+
+  async function loadAnalytics() {
+
+    try {
+
+      const children = await fetchChildren();
+      const behaviors = await fetchBehaviors();
+      const predictions = await fetchPredictions();
+
+      setChildren(children);
+      setBehaviors(behaviors);
+      setPredictions(predictions);
+
+    } catch (err) {
+      console.error(err);
+    }
+
+  }
+
+  loadAnalytics();
+
+}, []);
 
   const filterId = activeChildId === "all" ? null : activeChildId;
 
