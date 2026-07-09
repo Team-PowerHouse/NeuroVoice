@@ -126,10 +126,6 @@ https://neuro-voice-three.vercel.app/
 
 https://neurovoice-ai-complete-neurovoice-backend.onrender.com/docs
 
-### GitHub Repository
-
-https://github.com/Team-PowerHouse/NeuroVoice
-
 ---
 
 # ⚙️ Installation
