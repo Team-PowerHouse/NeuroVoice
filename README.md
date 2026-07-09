@@ -282,8 +282,8 @@ By enabling personalized behavioural communication, the platform promotes dignit
 # 👥 Team PowerHouse
 
 - **Haresh K**
-- Team Member 2
-- Team Member 3
+- **Sukanth G M**
+- **Athithya J M**
 
 ---
 
