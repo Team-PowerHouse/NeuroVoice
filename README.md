@@ -122,7 +122,7 @@ NeuroVoice AI addresses this challenge by preserving and transferring caregiver 
 
 ### Dashboard
 
-![Dashboard](docs/dashboard.png)
+![Dashboard](docs/Dashboard.pdf)
 
 ### Behaviour Dictionary
 
