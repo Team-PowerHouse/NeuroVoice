@@ -99,7 +99,6 @@ NeuroVoice AI addresses this challenge by preserving and transferring caregiver 
 - Vite
 - JavaScript
 - CSS
-- Axios
 
 ## Backend
 - FastAPI
@@ -141,7 +140,7 @@ git clone https://github.com/Team-PowerHouse/NeuroVoice.git
 ## Frontend
 
 ```bash
-cd NeuroVoice_AI_Complete/frontend
+cd NeuroVoice_AI_Complete/neurovoice_frontend
 
 npm install
 
