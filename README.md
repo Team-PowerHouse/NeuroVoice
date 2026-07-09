@@ -116,28 +116,6 @@ NeuroVoice AI addresses this challenge by preserving and transferring caregiver 
 
 ---
 
-# 📸 Screenshots
-
-> Replace these with actual screenshots.
-
-### Dashboard
-
-![Dashboard](docs/Dashboard.pdf)
-
-### Behaviour Dictionary
-
-![Dictionary](docs/dictionary.png)
-
-### Communication Passport
-
-![Passport](docs/passport.png)
-
-### Analytics Dashboard
-
-![Analytics](docs/analytics.png)
-
----
-
 # 🌐 Live Demo
 
 ### Frontend
